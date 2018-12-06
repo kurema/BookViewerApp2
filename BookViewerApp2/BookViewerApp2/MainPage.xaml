@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="BookViewerApp2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BookViewerApp2"
+    xmlns:viewlib="using:BookViewerApp2.ViewerLibrary.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView>
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Library" Icon="Library" />
+            <NavigationViewItem Content="History" Icon="Clock" />
+        </NavigationView.MenuItems>
+        <NavigationView.Content>
+            <Grid>
+                <viewlib:BookReader />
+            </Grid>
+        </NavigationView.Content>
+    </NavigationView>
+</Page>
