@@ -23,8 +23,8 @@ namespace BookViewerApp2
     sealed partial class App : Application
     {
         /// <summary>
-        ///単一アプリケーション オブジェクトを初期化します。これは、実行される作成したコードの
-        ///最初の行であるため、論理的には main() または WinMain() と等価です。
+        /// 単一アプリケーション オブジェクトを初期化します。これは、実行される作成したコードの
+        ///最初の行であるため、main() または WinMain() と論理的に等価です。
         /// </summary>
         public App()
         {
@@ -63,9 +63,9 @@ namespace BookViewerApp2
             {
                 if (rootFrame.Content == null)
                 {
-                    // ナビゲーションの履歴スタックが復元されていない場合、最初のページに移動します。
+                    // ナビゲーション スタックが復元されない場合は、最初のページに移動します。
                     // このとき、必要な情報をナビゲーション パラメーターとして渡して、新しいページを
-                    // 作成します
+                    //構成します
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // 現在のウィンドウがアクティブであることを確認します

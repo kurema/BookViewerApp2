@@ -100,12 +100,7 @@
                                             Margin="12,0"
                                             Grid.Row="1"
                                             Height="15">
-                            <TextBlock x:Name="PageCurrentElement"
-                                                Margin="0"
-                                                Text="0"
-                                                HorizontalAlignment="Left" 
-                                                VerticalAlignment="Bottom"/>
-                            <TextBlock x:Name="PageTotalElement"
+                            <TextBlock x:Name="PageInfoElement"
                                                 Text="0"
                                                 HorizontalAlignment="Right"
                                                 VerticalAlignment="Bottom" />
