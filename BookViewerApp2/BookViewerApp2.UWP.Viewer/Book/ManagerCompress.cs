@@ -11,10 +11,8 @@ namespace BookViewerApp2.Book
 {
 
 
-    public class ManagerCompress : Manager.IBookManagerUWP
+    public class ManagerCompressUWP : ManagerCompress, Manager.IBookManagerUWP
     {
-        public string[] Extensions => new[] { ".cbz", ".cbr", ".rar", ".zip", ".7z", ".cb7" };
-
         public async Task<IBook> GetBook(IStorageFile file)
         {
             var book = new BookCompress();

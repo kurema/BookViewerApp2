@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BookViewerApp2.Manager
 {
-    public class Image
+    public class UWP
     {
-        public static string[] AvailableExtensions { get; set; }
+        public static IBookManagerUWP[] AvailableBookManager { get; set; }
     }
 }

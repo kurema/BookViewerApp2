@@ -69,4 +69,10 @@ namespace BookViewerApp2.Book
             Entry = entry;
         }
     }
+
+    public class ManagerCompress : Manager.IBookManager
+    {
+        public string[] Extensions => new[] { ".cbz", ".cbr", ".rar", ".zip", ".7z", ".cb7" };
+
+    }
 }
