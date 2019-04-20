@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookViewerApp2.Helper
 {
-    static class Functions
+    public static class Functions
     {
         public static string CombineStringAndDouble(string str, double value)
         {

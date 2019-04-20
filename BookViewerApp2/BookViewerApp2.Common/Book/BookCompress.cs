@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
+using System.Linq;
+using System.Collections;
 
 namespace BookViewerApp2.Book
 {
-    public class BookCompress:IBook
+    public class BookCompress : IBook
     {
         public BookCompress(System.IO.Stream stream, bool naturalOrder, bool coverFirst)
         {
@@ -30,7 +29,7 @@ namespace BookViewerApp2.Book
         private void OnLoaded() => Loaded?.Invoke(this, new EventArgs());
         private SharpCompress.Archives.IArchiveEntry[] Entries;
 
-        public async Task LoadAsync(System.IO.Stream stream,bool naturalOrder,bool coverFirst)
+        public async Task LoadAsync(System.IO.Stream stream, bool naturalOrder, bool coverFirst)
         {
             SharpCompress.Archives.IArchive archive;
 
@@ -68,18 +67,6 @@ namespace BookViewerApp2.Book
         public PageCompress(SharpCompress.Archives.IArchiveEntry entry)
         {
             Entry = entry;
-        }
-    }
-
-    public class ManagerCompress : Manager.Book.IBookManager
-    {
-        public string[] Extensions => new[] { ".cbz", ".cbr", ".rar", ".zip", ".7z", ".cb7" };
-
-        public async Task<IBook> GetBook(IStorageFile file)
-        {
-            var book = new BookCompress();
-            await book.LoadAsync(System.IO.WindowsRuntimeStreamExtensions.AsStream(await file.OpenReadAsync()), false, false);//ToDo:Config Support!
-            return book;
         }
     }
 }

@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using BookViewerApp2.Manager;
 using Windows.Storage;
+using Windows.Storage.Streams;
 using pdf = Windows.Data.Pdf;
 
 //Dependency: UWP
 namespace BookViewerApp2.Book
 {
-    public class BookPdf:IBook
+    public class BookPdf: IBookUWP
     {
         public BookPdf() { }
 
@@ -36,7 +37,7 @@ namespace BookViewerApp2.Book
         public event EventHandler Loaded;
         private void OnLoaded() => Loaded?.Invoke(this, new EventArgs());
 
-        public async Task LoadAsync(Windows.Storage.IStorageFile file)
+        public async Task LoadAsync(IStorageFile file)
         {
             try
             {
@@ -50,7 +51,21 @@ namespace BookViewerApp2.Book
             }
         }
 
-        public IEnumerator<IPage> GetEnumerator()
+        public async Task LoadAsync(Windows.Storage.Streams.IRandomAccessStream stream,string filename)
+        {
+            try
+            {
+                Content = await pdf.PdfDocument.LoadFromStreamAsync(stream);
+                OnLoaded();
+                ID = Helper.Functions.CombineStringAndDouble(filename, Content.PageCount);
+            }
+            catch
+            {
+                Content = null;
+            }
+        }
+
+        public IEnumerator<IPageUWP> GetEnumerator()
         {
             if (Content == null) { throw new ArgumentOutOfRangeException(); }
             for (uint i = 0; i < Content.PageCount; i++)
@@ -59,13 +74,23 @@ namespace BookViewerApp2.Book
             }
         }
 
+        IEnumerator<IPageUWP> IEnumerable<IPageUWP>.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.GetEnumerator();
+            return GetEnumerator();
+        }
+
+        IEnumerator<IPage> IEnumerable<IPage>.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 
-    public class PagePdf : IPage
+    public class PagePdf : IPageUWP
     {
         pdf.PdfDocument _Pdf;
         uint _PageCount;
@@ -87,7 +112,7 @@ namespace BookViewerApp2.Book
         public pdf.PdfPage Content => _Page = _Page ?? _Pdf.GetPage(_PageCount);
     }
 
-    public class ManagerPdf : Manager.Book.IBookManager
+    public class ManagerPdf : Manager.IBookManagerUWP
     {
         public string[] Extensions => new[] { ".pdf" };
 
@@ -95,6 +120,13 @@ namespace BookViewerApp2.Book
         {
             var result = new BookPdf();
             await result.LoadAsync(file);
+            return result;
+        }
+
+        public async Task<IBook> GetBook(IRandomAccessStream stream, string filename)
+        {
+            var result = new BookPdf();
+            await result.LoadAsync(stream, filename);
             return result;
         }
     }
