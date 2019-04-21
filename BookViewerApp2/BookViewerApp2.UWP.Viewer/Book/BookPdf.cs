@@ -110,6 +110,31 @@ namespace BookViewerApp2.Book
         }
 
         public pdf.PdfPage Content => _Page = _Page ?? _Pdf.GetPage(_PageCount);
+
+        public async Task<Windows.Storage.Streams.InMemoryRandomAccessStream> GetStreamUWP(double width, double height)
+        {
+            var stream = new Windows.Storage.Streams.InMemoryRandomAccessStream();
+            await RenderToStreamAsync(stream, width, height);
+            return stream;
+        }
+
+        pdf.PdfPageRenderOptions _LastOption = null;
+
+        public async Task RenderToStreamAsync(IRandomAccessStream stream, double width, double height)
+        {
+            if (width == 0 || height == 0)
+            {
+                await Content.RenderToStreamAsync(stream);
+                _LastOption = null;
+            }
+            var pdfOption = new pdf.PdfPageRenderOptions();
+            if (height / Content.Size.Height < width / Content.Size.Width)
+                pdfOption.DestinationHeight = (uint)height;
+            else
+                pdfOption.DestinationWidth = (uint)width;
+            _LastOption = pdfOption;
+            await Content.RenderToStreamAsync(stream, pdfOption);
+        }
     }
 
     public class ManagerPdf : Manager.IBookManagerUWP
@@ -130,5 +155,4 @@ namespace BookViewerApp2.Book
             return result;
         }
     }
-
 }

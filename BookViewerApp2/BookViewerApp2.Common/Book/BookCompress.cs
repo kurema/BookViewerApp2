@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Collections;
+using System.IO;
 
 namespace BookViewerApp2.Book
 {
@@ -61,13 +62,16 @@ namespace BookViewerApp2.Book
         }
     }
 
-    public class PageCompress : IPage
+    public class PageCompress : IPageStream
     {
         SharpCompress.Archives.IArchiveEntry Entry;
         public PageCompress(SharpCompress.Archives.IArchiveEntry entry)
         {
             Entry = entry;
         }
+
+        Stream _Stream;
+        public Stream Stream => _Stream = _Stream ?? Entry.OpenEntryStream();
     }
 
     public class ManagerCompress : Manager.IBookManager

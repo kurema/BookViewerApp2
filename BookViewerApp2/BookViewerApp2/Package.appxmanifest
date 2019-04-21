@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="701237ef-4a5a-4b39-a807-bc6aa9f82bb2"
+    Name="476bf0ba-24f0-4507-979a-aa39012580e8"
     Publisher="CN=kurema"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="701237ef-4a5a-4b39-a807-bc6aa9f82bb2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="476bf0ba-24f0-4507-979a-aa39012580e8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>BookViewerApp2</DisplayName>

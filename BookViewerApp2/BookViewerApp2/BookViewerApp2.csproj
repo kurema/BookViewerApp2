@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{60852EDA-41C4-4C24-9538-64534AD8A937}</ProjectGuid>
+    <ProjectGuid>{E194012E-A10A-4275-9E8A-5425C50EF222}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BookViewerApp2</RootNamespace>
@@ -119,7 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +145,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -156,6 +156,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.csproj">
+      <Project>{aafd16f0-2a11-4146-931c-feac44b807af}</Project>
+      <Name>BookViewerApp2.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookViewerApp2.UWP.Viewer\BookViewerApp2.UWP.Viewer.csproj">
       <Project>{4374f4c5-efea-4fae-9e80-60085f6479ae}</Project>
       <Name>BookViewerApp2.UWP.Viewer</Name>

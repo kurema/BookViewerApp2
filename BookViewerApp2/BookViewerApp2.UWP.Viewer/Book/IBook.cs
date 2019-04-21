@@ -13,6 +13,6 @@ namespace BookViewerApp2.Book
 
     public interface IPageUWP : IPage
     {
-
+        Task<Windows.Storage.Streams.InMemoryRandomAccessStream> GetStreamUWP(double width,double height);
     }
 }
