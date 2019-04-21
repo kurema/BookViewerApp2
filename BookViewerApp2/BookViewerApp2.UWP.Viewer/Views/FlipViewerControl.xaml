@@ -9,7 +9,10 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    <FlipView >
+    <UserControl.DataContext>
+        <vm:BookViewModel />
+    </UserControl.DataContext>
+    <FlipView x:Name="FlipViewMain">
         <FlipView.ItemTemplate>
             <DataTemplate x:DataType="vm:PageViewModel">
                 <local:PageViewControl DataContext="{Binding}" />

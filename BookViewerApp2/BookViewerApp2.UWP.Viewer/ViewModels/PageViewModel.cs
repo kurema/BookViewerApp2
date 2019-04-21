@@ -14,7 +14,7 @@ namespace BookViewerApp2.ViewModels
 {
     public class PageViewModel : Helper.Observable
     {
-        public Book.IPage Content;
+        public Book.IPage Content { get; private set; }
 
         public Views.PageViewControl Control { get; set; }
 
@@ -36,7 +36,7 @@ namespace BookViewerApp2.ViewModels
             Control.Image.Source = result;
         }
 
-        public async Task<Windows.Storage.Streams.IRandomAccessStream> GetRandomAccessStream()
+        async Task<Windows.Storage.Streams.IRandomAccessStream> GetRandomAccessStream()
         {
             if (Control == null || Content == null) return null;
             try

@@ -38,7 +38,6 @@ namespace BookViewerApp2.Views
             ViewModel.Control = this;
             this.SizeChanged += (s, e) =>
             {
-                _SizeChangedTimer.Stop();
                 _SizeChangedTimer.Interval = TimeSpan.FromSeconds(0.3);
                 _SizeChangedTimer.Start();
             };
@@ -46,7 +45,7 @@ namespace BookViewerApp2.Views
 
         private async void SizeChangedTimerTick(object sender, object e)
         {
-            _SizeChangedTimer.Stop();
+            (sender as DispatcherTimer)?.Stop();
             await ViewModel.UpdateImage();
         }
     }

@@ -127,6 +127,7 @@
     <Compile Include="Manager\Book.cs" />
     <Compile Include="Manager\UWP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\PageViewModel.cs" />
     <Compile Include="Views\FlipViewerControl.xaml.cs">
       <DependentUpon>FlipViewerControl.xaml</DependentUpon>
@@ -142,9 +143,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.csproj">
+    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.Viewer.csproj">
       <Project>{aafd16f0-2a11-4146-931c-feac44b807af}</Project>
-      <Name>BookViewerApp2.Common</Name>
+      <Name>BookViewerApp2.Common.Viewer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

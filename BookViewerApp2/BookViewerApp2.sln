@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookViewerApp2.Common", "BookViewerApp2.Common\BookViewerApp2.Common.csproj", "{AAFD16F0-2A11-4146-931C-FEAC44B807AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookViewerApp2.Common.Viewer", "BookViewerApp2.Common\BookViewerApp2.Common.Viewer.csproj", "{AAFD16F0-2A11-4146-931C-FEAC44B807AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.UWP.Viewer", "BookViewerApp2.UWP.Viewer\BookViewerApp2.UWP.Viewer.csproj", "{4374F4C5-EFEA-4FAE-9E80-60085F6479AE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2", "BookViewerApp2\BookViewerApp2.csproj", "{E194012E-A10A-4275-9E8A-5425C50EF222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.Common.Shelf", "BookViewerApp2.Common.Shelf\BookViewerApp2.Common.Shelf.csproj", "{B8D11E93-37D7-4325-B395-4DE103B1E3E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,26 @@ Global
 		{E194012E-A10A-4275-9E8A-5425C50EF222}.Release|x86.ActiveCfg = Release|x86
 		{E194012E-A10A-4275-9E8A-5425C50EF222}.Release|x86.Build.0 = Release|x86
 		{E194012E-A10A-4275-9E8A-5425C50EF222}.Release|x86.Deploy.0 = Release|x86
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|ARM.Build.0 = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|ARM64.Build.0 = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x64.Build.0 = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
