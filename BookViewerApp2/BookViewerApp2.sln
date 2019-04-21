@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookViewerApp2.Common.Viewer", "BookViewerApp2.Common\BookViewerApp2.Common.Viewer.csproj", "{AAFD16F0-2A11-4146-931C-FEAC44B807AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookViewerApp2.Common.Viewer", "BookViewerApp2.Common.Viewer\BookViewerApp2.Common.Viewer.csproj", "{AAFD16F0-2A11-4146-931C-FEAC44B807AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.UWP.Viewer", "BookViewerApp2.UWP.Viewer\BookViewerApp2.UWP.Viewer.csproj", "{4374F4C5-EFEA-4FAE-9E80-60085F6479AE}"
 EndProject

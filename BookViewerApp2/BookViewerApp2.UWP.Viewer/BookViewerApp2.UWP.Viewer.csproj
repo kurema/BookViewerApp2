@@ -143,7 +143,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.Viewer.csproj">
+    <ProjectReference Include="..\BookViewerApp2.Common.Viewer\BookViewerApp2.Common.Viewer.csproj">
       <Project>{aafd16f0-2a11-4146-931c-feac44b807af}</Project>
       <Name>BookViewerApp2.Common.Viewer</Name>
     </ProjectReference>
