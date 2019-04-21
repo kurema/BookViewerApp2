@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookViewerApp2.Manager
+namespace BookViewerApp2.Manager.Viewer
 {
-    public static class Book
+    public static class Common
     {
         public static string[] AvailableExtensions => AvailableBookManager.SelectMany((a) => a.Extensions).ToArray();
 
         public static IBookManager[] AvailableBookManager { get; set; }
-    }
-
-    public interface IBookManager
-    {
-        string[] Extensions { get; }
     }
 }

@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>BookViewerApp2</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="IO\" />
+  </ItemGroup>
 
 </Project>

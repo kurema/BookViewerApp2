@@ -11,7 +11,7 @@ namespace BookViewerApp2.Book
 {
 
 
-    public class ManagerCompressUWP : ManagerCompress, Manager.IBookManagerUWP
+    public class ManagerCompressUWP : ManagerCompress, Manager.Viewer.IBookManagerUWP
     {
         public async Task<IBook> GetBook(IStorageFile file)
         {

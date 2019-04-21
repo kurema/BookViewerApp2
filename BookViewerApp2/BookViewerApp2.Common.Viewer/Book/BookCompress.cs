@@ -74,7 +74,7 @@ namespace BookViewerApp2.Book
         public Stream Stream => _Stream = _Stream ?? Entry.OpenEntryStream();
     }
 
-    public class ManagerCompress : Manager.IBookManager
+    public class ManagerCompress : Manager.Viewer.IBookManager
     {
         public string[] Extensions => new[] { ".cbz", ".cbr", ".rar", ".zip", ".7z", ".cb7" };
 

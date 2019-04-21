@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookViewerApp2.Init
+namespace BookViewerApp2.Init.Viewer
 {
     public static class Common
     {
@@ -19,7 +19,7 @@ namespace BookViewerApp2.Init
 
         public static void InitManagerBook()
         {
-            Manager.Book.AvailableBookManager = new[] { new Book.ManagerCompress() };
+            Manager.Viewer.Common.AvailableBookManager = new[] { new Book.ManagerCompress() };
         }
     }
 }

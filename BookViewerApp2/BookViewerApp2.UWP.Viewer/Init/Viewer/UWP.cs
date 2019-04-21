@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookViewerApp2.Init
+namespace BookViewerApp2.Init.Viewer
 {
     public static class UWP
     {
@@ -19,7 +19,7 @@ namespace BookViewerApp2.Init
 
         public static void InitManagerBook()
         {
-            Manager.Book.AvailableBookManager = Manager.UWP.AvailableBookManager = new Manager.IBookManagerUWP[] { new Book.ManagerCompressUWP(), new Book.ManagerPdf() };
+            Manager.Viewer.Common.AvailableBookManager = Manager.Viewer.UWP.AvailableBookManager = new Manager.Viewer.IBookManagerUWP[] { new Book.ManagerCompressUWP(), new Book.ManagerPdf() };
         }
     }
 }

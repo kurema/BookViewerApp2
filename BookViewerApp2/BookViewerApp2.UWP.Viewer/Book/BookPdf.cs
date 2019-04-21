@@ -137,7 +137,7 @@ namespace BookViewerApp2.Book
         }
     }
 
-    public class ManagerPdf : Manager.IBookManagerUWP
+    public class ManagerPdf : Manager.Viewer.IBookManagerUWP
     {
         public string[] Extensions => new[] { ".pdf" };
 
