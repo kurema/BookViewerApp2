@@ -156,9 +156,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BookViewerApp2.Common.Shelf\BookViewerApp2.Common.Shelf.csproj">
+      <Project>{b8d11e93-37d7-4325-b395-4de103b1e3e3}</Project>
+      <Name>BookViewerApp2.Common.Shelf</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookViewerApp2.Common.Viewer\BookViewerApp2.Common.Viewer.csproj">
       <Project>{aafd16f0-2a11-4146-931c-feac44b807af}</Project>
       <Name>BookViewerApp2.Common.Viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.csproj">
+      <Project>{f21392a1-4767-4825-8005-3099caca6e7b}</Project>
+      <Name>BookViewerApp2.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\BookViewerApp2.UWP.Viewer\BookViewerApp2.UWP.Viewer.csproj">
       <Project>{4374f4c5-efea-4fae-9e80-60085f6479ae}</Project>

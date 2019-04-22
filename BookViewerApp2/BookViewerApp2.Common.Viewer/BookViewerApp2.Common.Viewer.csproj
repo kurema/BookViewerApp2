@@ -9,4 +9,8 @@
     <PackageReference Include="SharpCompress" Version="0.23.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.csproj" />
+  </ItemGroup>
+
 </Project>

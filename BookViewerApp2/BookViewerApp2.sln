@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.UWP.Viewer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2", "BookViewerApp2\BookViewerApp2.csproj", "{E194012E-A10A-4275-9E8A-5425C50EF222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.Common.Shelf", "BookViewerApp2.Common.Shelf\BookViewerApp2.Common.Shelf.csproj", "{B8D11E93-37D7-4325-B395-4DE103B1E3E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookViewerApp2.Common.Shelf", "BookViewerApp2.Common.Shelf\BookViewerApp2.Common.Shelf.csproj", "{B8D11E93-37D7-4325-B395-4DE103B1E3E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookViewerApp2.Common", "BookViewerApp2.Common\BookViewerApp2.Common.csproj", "{F21392A1-4767-4825-8005-3099CACA6E7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,26 @@ Global
 		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x64.Build.0 = Release|Any CPU
 		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x86.ActiveCfg = Release|Any CPU
 		{B8D11E93-37D7-4325-B395-4DE103B1E3E3}.Release|x86.Build.0 = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|x64.Build.0 = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Debug|x86.Build.0 = Debug|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|ARM.Build.0 = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|ARM64.Build.0 = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|x64.ActiveCfg = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|x64.Build.0 = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F21392A1-4767-4825-8005-3099CACA6E7B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
