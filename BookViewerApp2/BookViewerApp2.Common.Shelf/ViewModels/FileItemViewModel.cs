@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BookViewerApp2.IO;
 
 namespace BookViewerApp2.ViewModels
 {
     public class FileItemViewModel:Helper.Observable
     {
         IO.IFileItem _Content;
+
+        public FileItemViewModel(IFileItem content)
+        {
+            Content = content ?? throw new ArgumentNullException(nameof(content));
+        }
+
         public IO.IFileItem Content
         {
             get => _Content;
