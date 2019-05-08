@@ -135,6 +135,9 @@
     <Compile Include="Views\PageViewControl.xaml.cs">
       <DependentUpon>PageViewControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewerControllerControl.xaml.cs">
+      <DependentUpon>ViewerControllerControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewerPage.xaml.cs">
       <DependentUpon>ViewerPage.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PageViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewerControllerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

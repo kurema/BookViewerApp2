@@ -12,7 +12,7 @@ namespace BookViewerApp2.Helper
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-        protected void Set<T>(ref T member, T value, [CallerMemberName]string propertyName = null)
+        protected void SetProperty<T>(ref T member, T value, [CallerMemberName]string propertyName = null)
         {
             if (Equals(member, value)) return;
             member = value;

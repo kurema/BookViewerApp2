@@ -18,7 +18,7 @@ namespace BookViewerApp2.ViewModels
         ObservableCollection<FileItemViewModel> _Content;
         public ObservableCollection<FileItemViewModel> Content
         {
-            get => _Content; set => Set(ref _Content, value);
+            get => _Content; set => SetProperty(ref _Content, value);
         }
         public OrderCollection<IO.IFileItem> Orders
         {
@@ -35,10 +35,10 @@ namespace BookViewerApp2.ViewModels
                 }
                 return _Orders;
             }
-            set => Set(ref _Orders, value);
+            set => SetProperty(ref _Orders, value);
         }
 
-        public IOrder<IFileItem> Order { get => _Order ?? Orders.FirstOrDefault() ?? new OrderKeep<IFileItem>(); set { if (value != null) { Set(ref _Order, value); } } }
+        public IOrder<IFileItem> Order { get => _Order ?? Orders.FirstOrDefault() ?? new OrderKeep<IFileItem>(); set { if (value != null) { SetProperty(ref _Order, value); } } }
 
         OrderCollection<IO.IFileItem> _Orders;
 

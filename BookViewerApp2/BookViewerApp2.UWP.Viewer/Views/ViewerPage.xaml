@@ -8,5 +8,8 @@
     xmlns:views="using:BookViewerApp2.Views"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
     <views:FlipViewerControl x:Name="flipViewer" />
+        <views:ViewerControllerControl/>
+    </Grid>
 </Page>

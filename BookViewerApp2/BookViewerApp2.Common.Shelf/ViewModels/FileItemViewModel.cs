@@ -25,7 +25,7 @@ namespace BookViewerApp2.ViewModels
         {
             get => _Content;
             set {
-                Set(ref _Content, value);
+                SetProperty(ref _Content, value);
                 OnPropertyChanged(nameof(IsDirectory));
                 OnPropertyChanged(nameof(Name));
             }
@@ -34,7 +34,7 @@ namespace BookViewerApp2.ViewModels
         ObservableCollection<FileItemViewModel> _Children = new ObservableCollection<FileItemViewModel>();
         public ObservableCollection<FileItemViewModel> Children
         {
-            get => _Children; set => Set(ref _Children, value);
+            get => _Children; set => SetProperty(ref _Children, value);
         }
 
         public bool IsDirectory => Content is IO.IDirectory;
