@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SharpCifs.Std" Version="0.2.13" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BookViewerApp2.Common\BookViewerApp2.Common.csproj" />
   </ItemGroup>
 

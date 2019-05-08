@@ -12,7 +12,7 @@
     <UserControl.DataContext>
         <vm:BookViewModel />
     </UserControl.DataContext>
-    <FlipView x:Name="FlipViewMain">
+    <FlipView x:Name="FlipViewMain" ItemsSource="{Binding}">
         <FlipView.ItemTemplate>
             <DataTemplate x:DataType="vm:PageViewModel">
                 <local:PageViewControl DataContext="{Binding}" />

@@ -5,4 +5,8 @@
     <RootNamespace>BookViewerApp2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SharpCifs.Std" Version="0.2.13" />
+  </ItemGroup>
+
 </Project>

@@ -26,5 +26,10 @@ namespace BookViewerApp2.Views
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.ViewerPage));
+        }
     }
 }
