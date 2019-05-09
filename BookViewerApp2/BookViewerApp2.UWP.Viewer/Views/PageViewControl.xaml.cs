@@ -35,7 +35,7 @@ namespace BookViewerApp2.Views
             _SizeChangedTimer = new DispatcherTimer();
             _SizeChangedTimer.Tick += SizeChangedTimerTick;
 
-            ViewModel.Control = this;
+            ViewModel.Control = new ViewModels.PageControlUWP(this);
             this.SizeChanged += (s, e) =>
             {
                 _SizeChangedTimer.Interval = TimeSpan.FromSeconds(0.3);

@@ -13,9 +13,9 @@ namespace BookViewerApp2.ViewModels
     {
         ObservableCollection<BookmarkItemViewModel> Items;
 
-        public BookmarkViewModel(ObservableCollection<BookmarkItemViewModel> items)
+        public BookmarkViewModel(params BookmarkItemViewModel[] items)
         {
-            Items = items ?? throw new ArgumentNullException(nameof(items));
+            Items = new ObservableCollection<BookmarkItemViewModel>(items) ?? throw new ArgumentNullException(nameof(items));
         }
 
         public event NotifyCollectionChangedEventHandler CollectionChanged
@@ -33,12 +33,25 @@ namespace BookViewerApp2.ViewModels
 
         public IEnumerator<BookmarkItemViewModel> GetEnumerator()
         {
-            return ((IEnumerable<BookmarkItemViewModel>)Items).OrderBy(a => a.Page).GetEnumerator();
+            return ((IEnumerable<BookmarkItemViewModel>)Items).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<BookmarkItemViewModel>)Items).OrderBy(a => a.Page).GetEnumerator();
+            return ((IEnumerable<BookmarkItemViewModel>)Items).GetEnumerator();
+        }
+
+        public void Add(BookmarkItemViewModel item)
+        {
+            if (Items.Count(a => a.Page == item.Page && !a.IsAutoSave) > 0) return;
+            Items.Insert(Items.IndexOf(Items.Last(a => a.Page <= item.Page)), item);
+        }
+
+        public void Add(int page, string title = "") => Add(new BookmarkItemViewModel(page, title));
+
+        public void Remove(BookmarkItemViewModel item)
+        {
+            if (Items.Contains(item) && item?.CanRemove == true) Items.Remove(item);
         }
     }
 }

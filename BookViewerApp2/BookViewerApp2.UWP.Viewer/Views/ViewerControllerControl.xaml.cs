@@ -23,5 +23,11 @@ namespace BookViewerApp2.Views
         {
             this.InitializeComponent();
         }
+
+        public void SetControlPanelVisibility(bool visibility)
+        {
+            if (visibility) VisualStateManager.GoToState(this, "ControlPanelFadeIn", true);
+            else VisualStateManager.GoToState(this, "ControlPanelFadeOut", true);
+        }
     }
 }
