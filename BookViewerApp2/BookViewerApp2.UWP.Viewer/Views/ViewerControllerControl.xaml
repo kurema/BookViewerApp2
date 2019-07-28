@@ -144,8 +144,9 @@
                                 <AppBarButton Icon="Bookmarks"
                                               Style='{StaticResource AppBarButtonStyle}'
                                               AllowFocusOnInteraction="True"
-                                              
                                               >
+                                    <!-- Note: This looks ugly and it's not my fault! -->
+                                    <!-- https://github.com/microsoft/microsoft-ui-xaml/issues/679 -->
                                     <AppBarButton.Flyout>
                                         <Flyout Placement="Top" >
                                             <Grid>
